@@ -1,3 +1,27 @@
+Compile
+=======
+
+```bash
+$ aarch64-linux-gnu-gcc phytool.c print_mv6.c print_phy.c -o phytool
+```
+
+loopback.sh
+=======
+- this script is for DP83867 loopback test and register dump
+- dump all registers content
+```bash
+# 0x0c is the phy address of eth0
+$ ./loopback.sh eth0 0x0c dump-all 
+```
+- enter digital loopback mode
+```bash
+$ ./loopback.sh eth0 0x0c digital
+```
+- enter far end loopback mode
+```bash
+$ ./loopback.sh eth0 0x0c far-end
+```
+
 phytool
 =======
 
